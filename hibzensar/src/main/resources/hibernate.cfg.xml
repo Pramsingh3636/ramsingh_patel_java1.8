@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="dialect">
+			org.hibernate.dialect.MySQL57Dialect
+		</property>
+		<property name="connection.driver_class">
+			com.mysql.cj.jdbc.Driver
+		</property>
+		<property name="connection.username">
+			root
+		</property>
+		<property name="connection.password">
+			root123
+		</property>
+		<property name="connection.url">
+			jdbc:mysql://localhost:3306/sys
+		</property>
+		
+<!-- hibernate is allowed to change the database to match the classes
+validate : check db class mappings
+create : create va new database
+create-and-drop
+ -->	
+ 	    <property name ="hibernate.hbm2ddl.auto">update</property>
+ 	    <property name ="hibernate.show_sql">true</property>
+
+		<!-- Object-Relational mappings for classes -->
+		<mapping resource="student.hbm.xml" />
+	</session-factory>
+</hibernate-configuration> 

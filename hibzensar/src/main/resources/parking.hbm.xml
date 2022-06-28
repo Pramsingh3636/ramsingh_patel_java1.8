@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping package="com.zensar.model">
+	<class name="Parking" table="parking">
+		<id name="sid" column="sid">
+		</id>
+		<property name="sname" column="sname" not-null="true"/>
+		<property name="phone" column="phone" />
+		<property name="email" column="email" />
+		<property name="branch" column="branch" />
+	</class>
+</hibernate-mapping>
